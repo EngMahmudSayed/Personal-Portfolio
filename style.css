@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Roboto", sans-serif;
+
+    background-image: linear-gradient(45deg,
+            hsl(240deg 83% 91%) 0%,
+            hsl(291deg 44% 86%) 8%,
+            hsl(335deg 58% 86%) 17%,
+            hsl(359deg 57% 86%) 25%,
+            hsl(17deg 48% 82%) 33%,
+            hsl(33deg 32% 78%) 42%,
+            hsl(57deg 16% 76%) 50%,
+            hsl(57deg 17% 80%) 58%,
+            hsl(57deg 17% 84%) 67%,
+            hsl(56deg 17% 88%) 75%,
+            hsl(56deg 17% 92%) 83%,
+            hsl(56deg 17% 96%) 92%,
+            hsl(0deg 0% 100%) 100%);
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    padding: 20px;
+    line-height: 1.8;
+    border-radius: 6px;
+}
+
+nav {
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav div {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav div span {
+    display: inline-block;
+}
+
+nav div span:first-of-type {
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #000;
+    border-radius: 15px;
+}
+
+nav ul {
+    list-style: none;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover {
+    background-color: #eee;
+}
+
+header {
+    margin: 50px 0;
+    text-align: center;
+}
+
+header p {
+    color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 25px 0;
+    padding: 25px 0;
+}
+
+main section {
+    width: calc((100% - 4%) / 3);
+    /* flex: 1; */
+}
+
+main section h2 {
+    margin-bottom: 25px;
+}
+
+main section.project {
+    border-right: 1px solid #eee;
+}
+
+main section.project ul {
+    list-style: none;
+}
+
+main section.project ul li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+main section.experiencs div {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+}
+
+main section.experiencs div a {
+    text-decoration: none;
+    color: #03a9f4;
+}
+
+main section.education {
+    border-left: 1px solid #eee;
+    padding: 10px;
+}
+
+main section.education p:nth-of-type(2) {
+    margin: 20px 0;
+}
+
+main section.education ul {
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+main section.education ul li::before {
+    content: '-';
+    color: black;
+    margin-right: 0.5em;
+}
+
+article {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+article h2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+article div {
+    width: 30%;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 15px;
+    line-height: 1.5;
+}
+
+article div p:last-child {
+    color: #777;
+    margin-top: 10px;
+}
+
+footer {
+    margin: 50px 0;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 600px;
+        padding: 30px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav div,
+    nav ul {
+        width: 100%;
+    }
+
+    nav div {
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    header {
+        margin: 100px 0;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    article {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    article div {
+        min-width: calc(100% - 60px);
+        margin: 30px;
+    }
+
+}
